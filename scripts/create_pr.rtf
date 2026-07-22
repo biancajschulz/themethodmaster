@@ -1,0 +1,119 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red51\green51\blue51;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c26096\c26096\c26096;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 #!/usr/bin/env python3\cf3 \
+    \cf2 import argparse\cf3 \
+    \cf2 import os\cf3 \
+    \cf2 import re\cf3 \
+    \cf2 from datetime import datetime\cf3 \
+    \cf2 from html import unescape\cf3 \
+    \
+    \cf2 METHODS_DIR = "methods"\cf3 \
+    \
+    \cf2 def parse_value(body, title):\cf3 \
+    \cf2     # re.escape() sorgt daf\'fcr, dass Sonderzeichen wie Klammern oder "or" keine Regex-Fehler werfen\cf3 \
+    \cf2     pattern = rf"### \{re.escape(title)\}\\n\\n(.*?)(?:\\n\\n---|\\n\\n###|\\Z)"\cf3 \
+    \cf2     match = re.search(pattern, body, re.DOTALL)\cf3 \
+    \cf2     if match:\cf3 \
+    \cf2         return unescape(match.group(1).strip())\cf3 \
+    \cf2     return ""\cf3 \
+    \
+    \cf2 def create_method_file(body):\cf3 \
+    \cf2     os.makedirs(METHODS_DIR, exist_ok=True)\cf3 \
+    \
+    \cf2     # Parse fields from the Issue body\cf3 \
+    \cf2     name = parse_value(body, "Method Name")\cf3 \
+    \cf2     url = parse_value(body, "Method URL")\cf3 \
+    \cf2     purpose = parse_value(body, "Purpose")\cf3 \
+    \cf2     process = parse_value(body, "Process (High-level)")\cf3 \
+    \cf2     experience = parse_value(body, "Experience")\cf3 \
+    \cf2     author = parse_value(body, "Author")\cf3 \
+    \cf2     \cf3 \
+    \cf2     # Optional fields (updated names)\cf3 \
+    \cf2     industry = parse_value(body, "Industry")\cf3 \
+    \cf2     org_size = parse_value(body, "Organization Size")\cf3 \
+    \cf2     teams_count = parse_value(body, "Teams Applied To")\cf3 \
+    \cf2     people_per_team = parse_value(body, "People Per Team")\cf3 \
+    \cf2     roles = parse_value(body, "Roles")\cf3 \
+    \cf2     leadership_levels = parse_value(body, "Leadership or Hierarchy Levels Involved")\cf3 \
+    \cf2     frequency = parse_value(body, "Frequency")\cf3 \
+    \cf2     time_period = parse_value(body, "Time Period")\cf3 \
+    \cf2     layers_to_customer = parse_value(body, "Layers between you and the Customer")\cf3 \
+    \cf2     when_it_breaks = parse_value(body, "When it breaks")\cf3 \
+    \cf2     tips = parse_value(body, "Tips")\cf3 \
+    \
+    \cf2     filename = re.sub(r"[^a-z0-9\\-]", "-", name.lower().strip())\cf3 \
+    \cf2     filepath = os.path.join(METHODS_DIR, f"\{filename\}.md")\cf3 \
+    \
+    \cf2     # Build optional metadata string\cf3 \
+    \cf2     meta = ""\cf3 \
+    \cf2     if industry: meta += f"\\nIndustry: \{industry\}"\cf3 \
+    \cf2     if org_size: meta += f"\\nOrganization Size: \{org_size\}"\cf3 \
+    \cf2     if teams_count: meta += f"\\nTeams Applied To: \{teams_count\}"\cf3 \
+    \cf2     if people_per_team: meta += f"\\nPeople Per Team: \{people_per_team\}"\cf3 \
+    \cf2     if roles: meta += f"\\nRoles: \{roles\}"\cf3 \
+    \cf2     if leadership_levels: meta += f"\\nLeadership or Hierarchy Levels Involved: \{leadership_levels\}"\cf3 \
+    \cf2     if frequency: meta += f"\\nFrequency: \{frequency\}"\cf3 \
+    \cf2     if time_period: meta += f"\\nTime Period: \{time_period\}"\cf3 \
+    \cf2     if layers_to_customer: meta += f"\\nLayers between you and the Customer: \{layers_to_customer\}"\cf3 \
+    \cf2     if when_it_breaks: meta += f"\\nWhen it breaks: \{when_it_breaks\}"\cf3 \
+    \cf2     if tips: meta += f"\\nTips: \{tips\}"\cf3 \
+    \
+    \cf2     content = f"""---\cf3 \
+    \cf2 name: "\{name\}"\cf3 \
+    \cf2 url: "\{url\}"\cf3 \
+    \
+    \
+    \cf2 \{name\}\cf3 \
+    \
+    \cf2 Purpose\cf3 \
+    \cf2 \{purpose\}\cf3 \
+    \
+    \cf2 Process (High-level)\cf3 \
+    \cf2 \{process\}\cf3 \
+    \cf2 \{meta\}\cf3 \
+    \
+    \cf2 Experience\cf3 \
+    \
+    \
+    \
+    \cf2 By \{author\}\cf3 \
+    \cf2 \{datetime.now().strftime("%d.%m.%Y")\}\cf3 \
+    \
+    \cf2 \{experience\}\cf3 \
+    \
+    \
+    \cf2 """\cf3 \
+    \
+    \cf2     # If file exists, append new experience\cf3 \
+    \cf2     if os.path.exists(filepath):\cf3 \
+    \cf2         with open(filepath, "r") as f:\cf3 \
+    \cf2             existing = f.read()\cf3 \
+    \cf2         content = existing + f"""\cf3 \
+    \
+    \
+    \cf2 By \{author\}\cf3 \
+    \cf2 \{datetime.now().strftime("%d.%m.%Y")\}\cf3 \
+    \
+    \cf2 \{experience\}\cf3 \
+    \
+    \
+    \cf2 """\cf3 \
+    \
+    \cf2     with open(filepath, "w") as f:\cf3 \
+    \cf2         f.write(content)\cf3 \
+    \
+    \cf2     print(f"Created: \{filepath\}")\cf3 \
+    \cf2     return filepath\cf3 \
+    \
+    \cf2 if name == "main":\cf3 \
+    \cf2     parser = argparse.ArgumentParser(description="Methods Collection")\cf3 \
+    \cf2     parser.add_argument("--body", required=True, help="The full body of the GitHub Issue")\cf3 \
+    \cf2     args = parser.parse_args()\cf3 \
+    \
+    \cf2     create_method_file(args.body)\cf3 \
+}
