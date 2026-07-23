@@ -43,25 +43,21 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: "## Optional Details"
+
   - type: textarea
     id: experience
     attributes:
       label: Experience
       description: How do you like the method? What went well, what broke?
-    validations:
-      required: true
 
   - type: input
     id: author
     attributes:
       label: Author
       description: Your Name
-    validations:
-      required: true
-
-  - type: markdown
-    attributes:
-      value: "## Optional Details"
 
   - type: input
     id: industry
