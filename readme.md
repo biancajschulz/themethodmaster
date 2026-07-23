@@ -13,14 +13,13 @@ There is immense value in taking the time to form your own thoughts about a meth
 
 ## How to contribute
 
-1. Go to the **Issues** tab
-2. Click **New Issue**
-3. Click **Submit a Method**
-4. Fill out the form *(Required fields are marked)*
-5. Click **Submit new issue**
-6. A Pull Request will be created automatically in the background
-7. After the merge, your experience appears in the collection
+[**→ Submit a Method**](https://github.com/biancajschulz/themethodmaster/issues/new?template=submit_method.yml)
 
+1. Click the link above
+2. Fill out the form *(Required fields are marked)*
+3. Click **Submit new issue**
+4. A Pull Request will be created automatically in the background
+5. After the merge, your experience appears in the collection
 ---
 
 ## Fields
@@ -29,6 +28,7 @@ There is immense value in taking the time to form your own thoughts about a meth
 * **Method Name:** If it’s your own method, give it a name.
 * **Method URL:** When there is no good website, write an article about the method.
 * **Purpose:** What is the method for?
+* * **Underlying Theory / Principles:** Which theory or principles is the method based on?
 * **Process:** The big picture / high-level process.
 * **Experience:** How do you like the method? What went well, what broke?
 

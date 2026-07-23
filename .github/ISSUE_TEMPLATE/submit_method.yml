@@ -1,0 +1,130 @@
+name: Submit a Method
+description: Contribute a method and your experience
+title: "New Method: "
+labels: ["new-method"]
+body:
+  - type: input
+    id: method_name
+    attributes:
+      label: Method Name
+      description: If it's your own method, give it a name.
+    validations:
+      required: true
+
+  - type: input
+    id: method_url
+    attributes:
+      label: Method URL
+      placeholder: https://example.com
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose
+      description: What is the method for?
+    validations:
+      required: true
+
+  - type: textarea
+    id: theory
+    attributes:
+      label: Underlying Theory / Principles
+      description: Which theory or principles is the method based on?
+    validations:
+      required: true
+
+  - type: textarea
+    id: process
+    attributes:
+      label: Process (High-level)
+      description: The big picture / high-level process.
+    validations:
+      required: true
+
+  - type: textarea
+    id: experience
+    attributes:
+      label: Experience
+      description: How do you like the method? What went well, what broke?
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: Your Name
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## Optional Details"
+
+  - type: input
+    id: industry
+    attributes:
+      label: Industry
+      placeholder: e.g. Finance, Healthcare
+
+  - type: dropdown
+    id: org_size
+    attributes:
+      label: Organization Size
+      options: ["<10", "<50", "<200", "<1000", "<5000", ">5000"]
+
+  - type: input
+    id: teams_count
+    attributes:
+      label: Teams Applied To
+      placeholder: e.g. 3
+
+  - type: input
+    id: people_per_team
+    attributes:
+      label: People Per Team
+      placeholder: e.g. 5
+
+  - type: input
+    id: roles
+    attributes:
+      label: Roles
+      placeholder: e.g. Devs, PMs
+
+  - type: input
+    id: leadership_levels
+    attributes:
+      label: Leadership or Hierarchy Levels Involved
+      placeholder: e.g. 2
+
+  - type: input
+    id: frequency
+    attributes:
+      label: Frequency
+      placeholder: e.g. Daily
+
+  - type: input
+    id: time_period
+    attributes:
+      label: Time Period
+      placeholder: e.g. 6 months
+
+  - type: input
+    id: layers_to_customer
+    attributes:
+      label: Layers between you and the Customer
+      placeholder: e.g. 2
+
+  - type: textarea
+    id: when_it_breaks
+    attributes:
+      label: When it breaks
+      description: Limitations of the method.
+
+  - type: textarea
+    id: tips
+    attributes:
+      label: Tips
+      description: Tips and tricks for success.

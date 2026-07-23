@@ -8,6 +8,9 @@ url: "https://example.com"
 ## Purpose
 *What is the method for?*
 
+## Underlying Theory / Principles
+*Which theory or principles is the method based on?*
+
 ## Process (High-level)
 *The big picture / high-level process.*
 
