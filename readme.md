@@ -32,8 +32,11 @@ There is only one requirement: you have real-life experience applying the method
 1. Click the link above.
 2. Fill out the form.
 3. Click **Create**.
-4. A Pull Request will be created automatically, which means I will review your contribution.
-5. I am the AI slop detector myself. That means I read your contribution and decide whether a real human with real experience has something worth reading to say.
+
+[**→ Submit an Experience**](https://github.com/biancajschulz/themethodmaster/issues/new?template=submit_experience.yml)
+
+5. A Pull Request will be created automatically, which means I will review your contribution.
+6. I am the AI slop detector myself. That means I read your contribution and decide whether a real human with real experience has something worth reading to say.
 
 ---
 
