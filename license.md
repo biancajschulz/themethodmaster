@@ -1,4 +1,4 @@
-```markdown
+
 ## License
 
 All content in this repository is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.
@@ -48,4 +48,3 @@ The complete legal text is available at:
 ---
 
 Copyright © 2026 Bianca J. Schulz and all contributors.
-```
