@@ -6,14 +6,28 @@ from datetime import datetime
 
 METHODS_DIR = "methods"
 
-FIELD_TITLES = [
-    "Method Name", "Method URL", "Purpose", "Underlying Theory / Principles",
-    "Process (High-level)", "Experience", "Author", "Industry",
-    "Organization Size", "Teams Applied To", "People Per Team", "Roles",
-    "Leadership or Hierarchy Levels Involved", "Frequency", "Time Period",
-    "Layers between you and the Customer", "When it breaks", "Tips",
-]
 
+
+FIELD_TITLES = [
+    "Method Name",
+    "Method URL",
+    "Purpose",
+    "Underlying Theory / Principles",
+    "How does it work?",
+    "Experience",
+    "Author",
+    "Industry",
+    "Organization Size",
+    "Teams Applied To",
+    "People Per Team",
+    "Roles",
+    "Leadership or Hierarchy Levels Involved",
+    "Frequency",
+    "Time Period",
+    "Layers Between You and the Customer",
+    "When does it break?",
+    "Tips",
+]
 
 def parse_value(body, title):
     others = "|".join(re.escape(t) for t in FIELD_TITLES if t != title)
@@ -36,7 +50,7 @@ def create_method_file(body):
     url = parse_value(body, "Method URL")
     purpose = parse_value(body, "Purpose")
     theory = parse_value(body, "Underlying Theory / Principles")
-    process = parse_value(body, "Process (High-level)")
+    process = parse_value(body, "How does it work?")
     experience = parse_value(body, "Experience")
     author = parse_value(body, "Author")
 
@@ -51,7 +65,7 @@ def create_method_file(body):
         ("Frequency", parse_value(body, "Frequency")),
         ("Time Period", parse_value(body, "Time Period")),
         ("Layers between you and the Customer",
-         parse_value(body, "Layers between you and the Customer")),
+         parse_value(body, "Layers Between You and the Customer")),
         ("When it breaks", parse_value(body, "When it breaks")),
         ("Tips", parse_value(body, "Tips")),
     ]
