@@ -1,6 +1,6 @@
 # The Method Master
 
-## Our Vision
+## My Vision
 
 I believe that learning the right methods is the foundation for building learning organizations. There is no single place where all the best methods are collected, and there is no place where people can share their thoughts and experiences regarding these methods.
 
