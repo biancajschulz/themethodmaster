@@ -18,10 +18,14 @@ jobs:
         with:
           template-path: .github/ISSUE_TEMPLATE/submit_experience.yml
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Append experience to method file
         env:
           JSON: ${{ steps.parse.outputs.jsonString }}
-        run: node .github/scripts/append-experience.js
+        run: python .github/scripts/append_experience.py
 
       - uses: peter-evans/create-pull-request@v6
         with:
