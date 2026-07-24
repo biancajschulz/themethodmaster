@@ -1,0 +1,30 @@
+name: Experience to PR
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  append:
+    if: contains(github.event.issue.labels.*.name, 'new-experience')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: stefanbuck/github-issue-parser@v3
+        id: parse
+        with:
+          template-path: .github/ISSUE_TEMPLATE/submit_experience.yml
+
+      - name: Append experience to method file
+        env:
+          JSON: ${{ steps.parse.outputs.jsonString }}
+        run: node .github/scripts/append-experience.js
+
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: experience/issue-${{ github.event.issue.number }}
+          title: "Experience for ${{ steps.parse.outputs.issueparser_method_name }}"
+          body: "Closes #${{ github.event.issue.number }}"
