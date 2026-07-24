@@ -7,7 +7,7 @@ body:
     id: method_name
     attributes:
       label: Method Name
-      description: If it's your own method, give it a name.
+      description: What is the name of the method? If it is your own method, what do you call it?
     validations:
       required: true
 
@@ -15,6 +15,7 @@ body:
     id: method_url
     attributes:
       label: Method URL
+      description: Where can readers learn more about the method? If there is no good website, can you write an article about it?
       placeholder: https://example.com
     validations:
       required: true
@@ -31,10 +32,123 @@ body:
     id: theory
     attributes:
       label: Underlying Theory / Principles
-      description: Which theory or principles is the method based on?
+      description: What are the underlying principles or theory? Can you explain them in your own words?
     validations:
       required: true
 
+  - type: textarea
+    id: how_it_works
+    attributes:
+      label: How does it work?
+      description: How is the method applied at a high level?
+    validations:
+      required: true
+
+  - type: textarea
+    id: experience
+    attributes:
+      label: Experience
+      description: What was your experience applying the method? What went well? What did not? Would you recommend it?
+    validations:
+      required: true
+
+  - type: input
+    id: industry
+    attributes:
+      label: Industry
+      description: Which industry was the method applied in?
+      placeholder: e.g., Finance, Healthcare, Automotive
+    validations:
+      required: false
+
+  - type: dropdown
+    id: organization_size
+    attributes:
+      label: Organization Size
+      description: How large was the organization?
+      options:
+        - "<10"
+        - "<50"
+        - "<200"
+        - "<1000"
+        - "<5000"
+        - ">5000"
+    validations:
+      required: false
+
+  - type: input
+    id: teams_applied_to
+    attributes:
+      label: Teams Applied To
+      description: How many teams applied this method in your organization?
+    validations:
+      required: false
+
+  - type: input
+    id: people_per_team
+    attributes:
+      label: People Per Team
+      description: How many people were on each team on average?
+    validations:
+      required: false
+
+  - type: input
+    id: roles
+    attributes:
+      label: Roles
+      description: Which roles did the team consist of?
+      placeholder: e.g., Devs, PMs
+    validations:
+      required: false
+
+  - type: input
+    id: leadership_levels
+    attributes:
+      label: Leadership or Hierarchy Levels Involved
+      description: How many leadership or hierarchy levels were involved?
+    validations:
+      required: false
+
+  - type: input
+    id: frequency
+    attributes:
+      label: Frequency
+      description: How often was the method applied?
+      placeholder: e.g., Daily
+    validations:
+      required: false
+
+  - type: input
+    id: time_period
+    attributes:
+      label: Time Period
+      description: Over what period of time was the method applied?
+    validations:
+      required: false
+
+  - type: input
+    id: customer_layers
+    attributes:
+      label: Layers Between You and the Customer
+      description: How many layers were there between you and the customer?
+    validations:
+      required: false
+
+  - type: textarea
+    id: when_it_breaks
+    attributes:
+      label: When does it break?
+      description: What are the limitations of the method?
+    validations:
+      required: false
+
+  - type: textarea
+    id: tips
+    attributes:
+      label: Tips
+      description: What tips or tricks would you recommend for success?
+    validations:
+      required: false
   - type: textarea
     id: process
     attributes:
