@@ -1,3 +1,4 @@
+
 ---
 name: "METHOD NAME"
 url: "https://example.com"
@@ -9,10 +10,13 @@ url: "https://example.com"
 *What is the method for?*
 
 ## Underlying Theory / Principles
-*Which theory or principles is the method based on?*
+*What are the underlying principles or theory? Can you explain them in your own words?*
 
-## Process (High-level)
-*The big picture / high-level process.*
+## How does it work?
+*How is the method applied at a high level?*
+
+## Experience
+*What was your experience applying the method? What went well? What did not? Would you recommend it?*
 
 ---
 
@@ -20,26 +24,22 @@ url: "https://example.com"
 
 | Metric | Value |
 | :--- | :--- |
-| **Industry** | *(e.g. "Finance", "Healthcare")* |
-| **Organization Size** | *(<10, <50, <200, <1000, <5000, >5000)* |
-| **Teams Applied To** | *(e.g. "3")* |
-| **People Per Team** | *(e.g. "5")* |
-| **Roles** | *(e.g. "Devs, PMs")* |
-| **Leadership or Hierarchy Levels Involved** | *(e.g. "2")* |
-| **Frequency** | *(e.g. "Daily")* |
-| **Time Period** | *(e.g. "6 months")* |
-| **Layers between you and the Customer** | *(e.g. "2")* |
+| **Industry** | *Which industry was the method applied in? (e.g., Finance, Healthcare, Automotive etc.)* |
+| **Organization Size** | *How large was the organization? (<10, <50, <200, <1000, <5000, >5000)* |
+| **Teams Applied To** | *How many teams applied this method in your organization?* |
+| **People Per Team** | *How many people were on each team on average?* |
+| **Roles** | *Which roles did the team consist of?* |
+| **Leadership or Hierarchy Levels Involved** | *How many leadership or hierarchy levels were involved?* |
+| **Frequency** | *How often was the method applied? (e.g., Daily)* |
+| **Time Period** | *Over what period of time was the method applied?* |
+| **Layers Between You and the Customer** | *How many layers were there between you and the customer?* |
 
 ---
 
-## When it breaks
-*Limitations of the method*
+## When does it break?
+*What are the limitations of the method?*
 
 ## Tips
-*Tips and tricks for success*
-
-## Experience
-*How do you like the method? What went well, what broke?*
+*What tips or tricks would you recommend for success?*
 
 ---
-*By Author Name — Day/Month/Year*
