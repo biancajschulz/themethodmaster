@@ -1,0 +1,38 @@
+name: Submit an Experience
+description: Add your experience to an existing method
+title: "New Experience: "
+labels: ["new-experience"]
+body:
+  - type: input
+    id: method_name
+    attributes:
+      label: Method Name
+      description: Which existing method are you adding an experience to? Use the exact name as listed.
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: Experience
+      description: What was your experience applying the method? What went well? What did not? Would you recommend it?
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: Your Name
+  - type: markdown
+    attributes:
+      value: "## Optional Details"
+  - type: input
+    id: industry
+    attributes:
+      label: Industry
+      placeholder: e.g. Finance, Healthcare
+  - type: dropdown
+    id: org_size
+    attributes:
+      label: Organization Size
+      options: ["<10", "<50", "<200", "<1000", "<5000", ">5000"]
+  # ... restliche optionale Felder analog zu submit_method.yml
