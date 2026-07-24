@@ -1,64 +1,69 @@
 # The Method Master
 
-> **Collect the methods. Share the success stories and the scars.**
+## Our Vision
 
+I believe that learning the right methods is the foundation for building learning organizations. There is no single place where all the best methods are collected, and there is no place where people can share their thoughts and experiences regarding these methods.
 
-The Method Master is a living, open collection of methods of all kind. Our vision is to share our thoughts and experiences and to learn from each other. You can also contribute your own methods, the ones you developed by yourself.
+**The Method Master is now that place.**
+
+Driven by AI, we face the challenge of transforming organizations. To do that, we need a new combination of methods and even new ones that are not yet invented. Every artist or inventor mastered their craft. With The Method Master, we provide you with the foundation to see about what already exists. It is a living, open collection of methods of all kinds. Our vision is to share our thoughts and experiences and to learn the craft from each other.
 
 ---
 
-### Everyone and also your AI agent can fill out the form, but me, Bianca J. Schulz, will review it and decide whether your contribution meets the standard.
+### Everyone, including your AI agent, can fill out the form, but I, Bianca J. Schulz, will review it and decide whether your contribution meets the standard.
 
-#### There are 2 paths: contributing a new method or contributing a new experience to an existing method
+#### There are 2 paths: contributing a new method or contributing a new experience to an existing method.
 
-## The Standard for contributing a new method to The Method Master
-A collection of methods is only useful for others when it meets the following requirements:
-* you are able to check whether there is already an entry about the method
-* there is good website about the method, where readers can learn more about it
-* you reflected about the method and you can explain the underlying principles or theory
-* you have applied the method or you have been part of an organization where this method was applied and you saw what happened, what went well and what didn't
-* Ideally you can provide more details about the setup in which the method was applied
+## The Standard for Contributing a New Method to The Method Master
+A collection of methods is only useful to others when it meets the following requirements:
+* you are able to check whether there is already an entry for the method
+* there is a good website about the method where readers can learn more about it
+* you have reflected on the method and can explain the underlying principles or theory
+* you have applied the method, or you have been part of an organization where the method was applied, and you observed what happened, what went well, and what did not
+* ideally, you can provide more details about the setup in which the method was applied
 
-## The Standard for contributing a new experience to an existing method
-There is only one requirement and that is, that you have a real-life experience of applying the method. And that means you have to describe a little bit the situation. The situation you experienced must be comprehensible to others.
-  
+## The Standard for Contributing a New Experience to an Existing Method
+There is only one requirement: you have real-life experience applying the method. This means you need to describe the situation well enough for others to understand it.
 
-## How to contribute
+## How to Contribute
 
 [**→ Submit a Method**](https://github.com/biancajschulz/themethodmaster/issues/new?template=submit_method.yml)
 
-1. Click the link above
-2. Fill out the form 
-3. Click **Create**
-4. A Pull Request will be created automatically and that means I will review a message that someone made a request
-5. I am the AI slop detector myself, that means, I read your contribution and decide whether a real human with real experience has something to say that's worth reading
+1. Click the link above.
+2. Fill out the form.
+3. Click **Create**.
+4. A Pull Request will be created automatically, which means I will review your contribution.
+5. I am the AI slop detector myself. That means I read your contribution and decide whether a real human with real experience has something worth reading to say.
+
 ---
 
 ## Fields
 
 ### Required
-* **Method Name:** If it’s your own method, give it a name.
-* **Method URL:** When there is no good website, write an article about the method.
+* **Method Name:** What is the name of the method? If it is your own method, what do you call it?
+* **Method URL:** Where can readers learn more about the method? If there is no good website, can you write an article about it?
 * **Purpose:** What is the method for?
-* **Underlying Theory / Principles:** Which theory or principles is the method based on?
-* **Process:** The big picture / high-level process.
-* **Experience:** How do you like the method? What went well, what broke?
+* **Underlying Theory / Principles:** What are the underlying principles or theory? Can you explain them in your own words?
+* **How does it work?** How is the method applied at a high level?
+* **Experience:** What was your experience applying the method? What went well? What did not? Would you recommend it?
 
 ### Optional
-* **Industry:** (e.g., "Finance", "Healthcare")
-* **Organization Size:** (<10, <50, <200, <1000, <5000, >5000)
-* **Teams Applied To:** (e.g., "3")
-* **People Per Team:** (e.g., "5")
-* **Roles:** (e.g., "Devs, PMs")
-* **Leadership or Hierarchy Levels Involved:** (e.g., "2")
-* **Frequency:** (e.g., "Daily")
-* **Time Period:** (e.g., "6 months")
-* **Layers between you and the Customer:** (e.g., "2")
-* **When it breaks:** Limitations of the method.
-* **Tips:** Tips and tricks for success.
+* **Industry:** Which industry was the method applied in? (e.g., Finance, Healthcare, Automotive etc.)
+* **Organization Size:** How large was the organization? (<10, <50, <200, <1000, <5000, >5000)
+* **Teams Applied To:** How many teams applied this method in your organization?
+* **People Per Team:** How many people were on each team on average?
+* **Roles:** Which roles did the team consist of?
+* **Leadership or Hierarchy Levels Involved:** How many leadership or hierarchy levels were involved?
+* **Frequency:** How often was the method applied? (e.g., Daily)
+* **Time Period:** Over what period of time was the method applied?
+* **Layers Between You and the Customer:** How many layers were there between you and the customer?
+* **When does it break?** What are the limitations of the method?
+* **Tips:** What tips or tricks would you recommend for success?
 
 ---
 
 ## License
 
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)
+
+
